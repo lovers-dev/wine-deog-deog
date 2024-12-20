@@ -1,9 +1,9 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+
 import { FlatCompat } from '@eslint/eslintrc';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginImport from 'eslint-plugin-import';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -20,13 +20,10 @@ const eslintConfig = [
 
   {
     plugins: {
-      prettier: eslintPluginPrettier,
       '@typescript-eslint': typescriptEslintPlugin,
       import: eslintPluginImport,
     },
     rules: {
-      'prettier/prettier': 'error',
-
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
